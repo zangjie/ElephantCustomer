@@ -10,7 +10,9 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Masonry/Masonry.h>
 #import "MineAboutViewController.h"
+#import "ModifyPasswordViewController.h"
 #import "UserModel.h"
+
 @interface MineSetViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)UITableView *setTableView;
 @property (nonatomic, strong)NSArray *arrayTitle;
@@ -102,7 +104,10 @@
             [self clearFile];
         }]];
         [self presentViewController:alertController animated:YES completion:nil];
-    }else if(indexPath.row==3){
+    } else if(indexPath.row == 2) {
+        ModifyPasswordViewController *modifyPasswordVC = [ModifyPasswordViewController new];
+        [self.navigationController pushViewController:modifyPasswordVC animated:YES];
+    } else if(indexPath.row==3){
         MineAboutViewController *aboutVC = [[MineAboutViewController alloc]init];
         [self.navigationController pushViewController:aboutVC animated:YES];
     }
