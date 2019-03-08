@@ -1,0 +1,28 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+
+target 'ElephantCustomer' do
+  use_frameworks!
+    pod 'Masonry'
+    pod 'SDWebImage'
+    pod 'MJRefresh'
+    pod 'NullSafe'
+    pod 'SVProgressHUD'
+    pod 'JPush'
+    pod 'AFNetworking'
+    pod 'JSONModel'
+    pod 'YYImage'
+    pod 'TZImagePickerController'
+    target 'ElephantCustomerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ElephantCustomerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+

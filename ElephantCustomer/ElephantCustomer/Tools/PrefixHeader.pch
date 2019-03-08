@@ -1,0 +1,66 @@
+//
+//  PrefixHeader.pch
+//  ElephantCustomer
+//
+//  Created by zj on 2019/2/25.
+//  Copyright © 2019 zj. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+typedef void(^Failure)(id errorObject);
+#import "AppDelegate.h"
+
+#define lightGrayTextColor UICOLOR_WITH_HEX(0x9fa5b6)
+#define darkGrayTextColor UICOLOR_WITH_HEX(0x454553)
+#define lessRedColor UICOLOR_WITH_HEX(0xff3d5e)
+#define backgroundGrayColor UICOLOR_WITH_HEX(0xf0f5fc)
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define IS_IPHONE_X ( mScreenHeight == 812.f ? YES : NO)
+#define STATUS_BAR_HEIGHT (IS_IPHONE_X ? 44.f : 20.f)
+#define DISTANCE_STATUS_BAR_SPANCEING 5
+#define NAVIGATION_BAR_HEIGHT 44
+#define NAVICATION_HEADER_VIEW_HEIGHT (STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)
+#define mFont(font) [UIFont systemFontOfSize:autoScaleW(font)]
+
+#define mainColor UICOLOR_WITH_HEX(0x41ddb5)
+#define RColor(r,g,b,a) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+#define UICOLOR_WITH_RGB(r,g,b,a) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+#define UICOLOR_WITH_HEX(rgb) [UIColor colorWithRed:((float)((rgb&0xFF0000)>>16))/255.0 green:((float)((rgb&0xFF00)>>8))/255.0  blue:((float)(rgb&0xFF))/255.0  alpha:1]
+
+
+#define mScreenWidth          ([UIScreen mainScreen].bounds.size.width)
+#define mScreenHeight         ([UIScreen mainScreen].bounds.size.height)
+#define autoScaleW(width) [(AppDelegate *)[UIApplication sharedApplication].delegate autoScaleW:width]
+#define autoScaleH(height) [(AppDelegate *)[UIApplication sharedApplication].delegate autoScaleH:height]
+//单例
+#define SINGLETON_INTERFACE + (nonnull instancetype)sharedInstance;
+#define SINGLETON_IMPLEMENTATION(singleton) + (nonnull instancetype)sharedInstance { \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+singleton = [[[self class] alloc] init]; \
+}); \
+return singleton; \
+} \
+\
++ (nonnull instancetype)allocWithZone:(struct _NSZone *)zone { \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+singleton = [super allocWithZone:zone]; \
+}); \
+return singleton; \
+} \
+\
+- (nonnull id)copyWithZone:(NSZone *)zone { \
+return singleton; \
+} \
+
+//接口
+#define HostUrl @"https://newtest.epscn.net/dfapi"//开发
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

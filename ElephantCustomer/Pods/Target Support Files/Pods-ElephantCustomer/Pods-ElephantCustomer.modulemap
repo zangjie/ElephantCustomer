@@ -1,0 +1,6 @@
+framework module Pods_ElephantCustomer {
+  umbrella header "Pods-ElephantCustomer-umbrella.h"
+
+  export *
+  module * { export * }
+}
