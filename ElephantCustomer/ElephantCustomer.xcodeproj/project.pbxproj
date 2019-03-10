@@ -108,6 +108,9 @@
 		38BF512A2226AEDD00C090BF /* OrderHeadMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF51292226AEDD00C090BF /* OrderHeadMoveView.m */; };
 		A138F4A55659A47A1B63405A /* Pods_ElephantCustomerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D38D7EBA539651C04438A4 /* Pods_ElephantCustomerUITests.framework */; };
 		D1048A5322323D2400343E10 /* PasswordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1048A5222323D2400343E10 /* PasswordTableViewCell.m */; };
+		D14947BB223252C900B7DC95 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D14947BA223252C900B7DC95 /* FeedbackViewController.m */; };
+		D177320522336387004A968A /* FeedbackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D177320422336387004A968A /* FeedbackTableViewCell.m */; };
+		D18FE208223366E100324473 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = D18FE207223366E100324473 /* Feedback.m */; };
 		D1926D472232386B003A4FCB /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1926D462232386B003A4FCB /* ModifyPasswordViewController.m */; };
 		E053AF5CC857B9E6C5770987 /* Pods_ElephantCustomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84188620D21254B94A4113CF /* Pods_ElephantCustomer.framework */; };
 /* End PBXBuildFile section */
@@ -341,6 +344,12 @@
 		B55EBCF41A86320C258C11CA /* Pods-ElephantCustomer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElephantCustomer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElephantCustomer/Pods-ElephantCustomer.release.xcconfig"; sourceTree = "<group>"; };
 		D1048A5122323D2400343E10 /* PasswordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordTableViewCell.h; sourceTree = "<group>"; };
 		D1048A5222323D2400343E10 /* PasswordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordTableViewCell.m; sourceTree = "<group>"; };
+		D14947B9223252C900B7DC95 /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		D14947BA223252C900B7DC95 /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		D177320322336387004A968A /* FeedbackTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackTableViewCell.h; sourceTree = "<group>"; };
+		D177320422336387004A968A /* FeedbackTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackTableViewCell.m; sourceTree = "<group>"; };
+		D18FE206223366E100324473 /* Feedback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feedback.h; sourceTree = "<group>"; };
+		D18FE207223366E100324473 /* Feedback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feedback.m; sourceTree = "<group>"; };
 		D1926D452232386B003A4FCB /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
 		D1926D462232386B003A4FCB /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
 		D2F2FFCB0AF4AE7913D2A969 /* Pods_ElephantCustomerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElephantCustomerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -735,6 +744,8 @@
 		38BF511F2226909600C090BF /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D18FE206223366E100324473 /* Feedback.h */,
+				D18FE207223366E100324473 /* Feedback.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -756,6 +767,8 @@
 				38109CA6222D02A800E0855F /* MineAboutViewController.m */,
 				D1926D452232386B003A4FCB /* ModifyPasswordViewController.h */,
 				D1926D462232386B003A4FCB /* ModifyPasswordViewController.m */,
+				D14947B9223252C900B7DC95 /* FeedbackViewController.h */,
+				D14947BA223252C900B7DC95 /* FeedbackViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -771,6 +784,8 @@
 				38109C9D222CEA3D00E0855F /* MessageTableViewCell.m */,
 				D1048A5122323D2400343E10 /* PasswordTableViewCell.h */,
 				D1048A5222323D2400343E10 /* PasswordTableViewCell.m */,
+				D177320322336387004A968A /* FeedbackTableViewCell.h */,
+				D177320422336387004A968A /* FeedbackTableViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1162,6 +1177,7 @@
 				387949EB2223B176000287E1 /* OrderNavViewController.m in Sources */,
 				38109CBF222E7C1700E0855F /* OrderProjectReportTableViewCell.m in Sources */,
 				38109D272230FC1400E0855F /* ContentAndPhotoTableViewCell.m in Sources */,
+				D177320522336387004A968A /* FeedbackTableViewCell.m in Sources */,
 				38109D13222FB36700E0855F /* YBIBFileManager.m in Sources */,
 				38ACC56C222788CF0023217F /* OrderInfo.m in Sources */,
 				38BF512A2226AEDD00C090BF /* OrderHeadMoveView.m in Sources */,
@@ -1196,6 +1212,7 @@
 				387949E52223B08C000287E1 /* OrderViewController.m in Sources */,
 				38BF50ED2223D8C400C090BF /* HomeTableHeadView.m in Sources */,
 				38109D16222FB36700E0855F /* YBIBLayoutDirectionManager.m in Sources */,
+				D18FE208223366E100324473 /* Feedback.m in Sources */,
 				38109D242230F9E800E0855F /* PlaceOrderViewController.m in Sources */,
 				38109CA7222D02A800E0855F /* MineAboutViewController.m in Sources */,
 				387949E82223B161000287E1 /* HomeNavViewController.m in Sources */,
@@ -1222,6 +1239,7 @@
 				38109D0F222FB36700E0855F /* YBImage.m in Sources */,
 				38BF51022224D6C600C090BF /* YYXYNetworking.m in Sources */,
 				387C3523222924A800CBBBC9 /* MineChangeJobViewController.m in Sources */,
+				D14947BB223252C900B7DC95 /* FeedbackViewController.m in Sources */,
 				38109D08222FB36700E0855F /* YBVideoBrowseActionBar.m in Sources */,
 				38109C9B222CCCED00E0855F /* MineMessageViewController.m in Sources */,
 				387949F82223C7F0000287E1 /* NavHomeView.m in Sources */,

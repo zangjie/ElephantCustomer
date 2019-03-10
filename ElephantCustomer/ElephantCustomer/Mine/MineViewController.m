@@ -15,7 +15,9 @@
 #import "MineBaseInfoViewController.h"
 #import "MineOrderViewController.h"
 #import "MineMessageViewController.h"
+#import "FeedbackViewController.h"
 #import "MineSetViewController.h"
+
 @interface MineViewController ()<UITableViewDelegate,UITableViewDataSource,MineBaseInfoViewControllerDelegate>
 @property (nonatomic, strong)NavHomeView *navHomeView;
 @property (nonatomic, strong)UITableView *mineTableView;
@@ -128,22 +130,13 @@
     if(indexPath.row==0){
         MineOrderViewController *ordrVC = [[MineOrderViewController alloc]init];
         [self.navigationController pushViewController:ordrVC animated:YES];
-    }else if(indexPath.row==3){
+    } else if(indexPath.row == 2){
+        FeedbackViewController *feedbackVC = [[FeedbackViewController alloc]init];
+        [self.navigationController pushViewController:feedbackVC animated:YES];
+    } else if(indexPath.row==3){
         MineSetViewController *setVC = [[MineSetViewController alloc]init];
         [self.navigationController pushViewController:setVC animated:YES];
     }
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
